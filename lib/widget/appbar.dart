@@ -10,6 +10,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      surfaceTintColor: Colors.white,
       centerTitle: true,
       title: SvgPicture.asset("lib/assets/twitter_logo.svg"),
     );

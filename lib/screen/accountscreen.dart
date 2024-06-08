@@ -15,7 +15,6 @@ class AccountScreen extends StatefulWidget {
 }
 
 class _AccountScreenState extends State<AccountScreen> {
-  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   final Map<String, String> _formdata = {};
   final TextEditingController _BirthdayController = TextEditingController();
   final TextEditingController _nameController = TextEditingController();
@@ -194,11 +193,17 @@ class _AccountScreenState extends State<AccountScreen> {
                   color: Colors.grey,
                 ),
               ),
-              GestureDetector(
-                onTap: _onSubmitTap,
-                child: nextButton(
-                  disable: _username.isEmpty && _usermail.isEmpty,
-                ),
+              Gaps.v96,
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  GestureDetector(
+                    onTap: _onSubmitTap,
+                    child: nextButton(
+                      disable: _username.isEmpty && _usermail.isEmpty,
+                    ),
+                  ),
+                ],
               ),
             ],
           ),
@@ -219,6 +224,7 @@ class _AccountScreenState extends State<AccountScreen> {
           child: SizedBox(
             height: 300,
             child: CupertinoDatePicker(
+              backgroundColor: Colors.white,
               mode: CupertinoDatePickerMode.date,
               onDateTimeChanged: _setTextFieldDate,
             ),

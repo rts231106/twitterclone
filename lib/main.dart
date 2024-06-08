@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:twitterclone/screen/ConfirmmationCodeScreen.dart';
 import 'package:twitterclone/screen/signupscreen.dart';
 
 void main() {
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: Colors.white,
         primaryColor: const Color(0xff1DA1F2),
       ),
-      home: const SignUpScreen(),
+      home: const ConfirmmationCodeScreen(),
     );
   }
 }

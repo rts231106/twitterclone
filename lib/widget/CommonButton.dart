@@ -18,7 +18,7 @@ class CommonButton extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(
         horizontal: Sizes.size56,
-        vertical: Sizes.size14,
+        vertical: Sizes.size12,
       ),
       decoration: BoxDecoration(
         color: blackmode ? Colors.black : Colors.white,

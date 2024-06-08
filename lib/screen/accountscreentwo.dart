@@ -1,6 +1,8 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:twitterclone/constants/gaps.dart';
 import 'package:twitterclone/constants/sizes.dart';
+import 'package:twitterclone/screen/ConfirmmationCodeScreen.dart';
 import 'package:twitterclone/widget/CommonButton.dart';
 import 'package:twitterclone/widget/appbar.dart';
 
@@ -15,6 +17,13 @@ class AccountScreenTwo extends StatelessWidget {
     required this.usermail,
     required this.userbirthday,
   });
+
+  void _nextTap(BuildContext context){ 
+        Navigator.of( context).push(
+      MaterialPageRoute(
+        builder: (context) => ConfirmmationCodeScreen(),
+    ));
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -112,10 +121,13 @@ class AccountScreenTwo extends StatelessWidget {
                 ),
               ),
               Gaps.v20,
-              const CommonButton(
-                text: "Sign Up",
-                blackmode: true,
-                icon: null,
+              GestureDetector(
+                onTap: () => _nextTap(context),
+                child: const CommonButton(
+                  text: "Sign Up",
+                  blackmode: true,
+                  icon: null,
+                ),
               )
             ],
           ),
