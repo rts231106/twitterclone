@@ -51,6 +51,7 @@ const likes = [
 ];
 
 class InterestTwoScreen extends StatefulWidget {
+  static String routeName = "/interest_two";
   final List<String> interests;
 
   const InterestTwoScreen({

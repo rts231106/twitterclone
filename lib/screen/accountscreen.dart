@@ -8,6 +8,7 @@ import 'package:twitterclone/widget/appbar.dart';
 import 'package:twitterclone/widget/nextbutton.dart';
 
 class AccountScreen extends StatefulWidget {
+  static String routeName = "/create_account";
   const AccountScreen({super.key});
 
   @override

@@ -8,6 +8,7 @@ import 'package:twitterclone/widget/CommonButton.dart';
 import 'package:twitterclone/widget/appbar.dart';
 
 class CustomMizeScreen extends StatefulWidget {
+  
   final String username;
   final String usermail;
   final String userbirthday;

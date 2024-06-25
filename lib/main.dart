@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:twitterclone/router.dart';
 import 'package:twitterclone/screen/ConfirmmationCodeScreen.dart';
 import 'package:twitterclone/screen/signupscreen.dart';
 
@@ -12,7 +13,8 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
+      routerConfig: router,
       theme: ThemeData(
         appBarTheme: const AppBarTheme(
           centerTitle: true,
@@ -20,7 +22,6 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: Colors.white,
         primaryColor: const Color(0xff1DA1F2),
       ),
-      home: const ConfirmmationCodeScreen(),
     );
   }
 }

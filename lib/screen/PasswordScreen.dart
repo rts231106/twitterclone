@@ -9,6 +9,7 @@ import 'package:twitterclone/widget/CommonButton.dart';
 import 'package:twitterclone/widget/appbar.dart';
 
 class PasswordScreen extends StatefulWidget {
+  static String routeName = "/password";
   const PasswordScreen({super.key});
 
   @override

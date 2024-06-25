@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:go_router/go_router.dart';
 import 'package:twitterclone/constants/gaps.dart';
 import 'package:twitterclone/constants/sizes.dart';
 import 'package:twitterclone/screen/PasswordScreen.dart';
@@ -58,9 +59,7 @@ class _ConfirmmationCodeScreenState extends State<ConfirmmationCodeScreen> {
 
   void _onNextTap() {
     if (_code.length == 5) {
-      Navigator.of(context).push(
-        MaterialPageRoute(builder: (context) => const PasswordScreen()),
-      );
+      context.push(PasswordScreen.routeName);
     }
     return;
   }

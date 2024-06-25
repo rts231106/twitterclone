@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:go_router/go_router.dart';
 import 'package:twitterclone/constants/gaps.dart';
 import 'package:twitterclone/constants/sizes.dart';
 import 'package:twitterclone/screen/accountscreen.dart';
@@ -8,14 +9,11 @@ import 'package:twitterclone/widget/CommonButton.dart';
 import 'package:twitterclone/widget/appbar.dart';
 
 class SignUpScreen extends StatelessWidget {
+  static const routeName = "/";
   const SignUpScreen({super.key});
 
   void _onAccountTap(BuildContext context) {
-    Navigator.of(context).push(
-      MaterialPageRoute(
-        builder: (context) => const AccountScreen(),
-      ),
-    );
+    context.push(AccountScreen.routeName);
   }
 
   @override
